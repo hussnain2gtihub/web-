@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin:0 ;
+    padding: 0;
+    background-color: rgba(0, 255, 255, 0.16);
+}
+
+        header {
+    
+    background: #208e9e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 150px;
+}
+.img{
+    top:20px;
+    position: absolute;
+    left:85px;  
+    border-radius:10%;  
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+p{
+    font-size: 30px;
+}
+
+.head{
+    
+    
+    margin-top:70px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width:900px;
+    height: 70px;
+    position: absolute;
+    left: 550px;
+    background: linear-gradient( to top ,#53aebc99 5% ,#f1f4f4f3);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    
+}
+.h3{
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  left:209px;
+  font-size:30px ;
+    
+}
+.description{
+    margin-top:200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width:95%;
+    height: max-content;
+    background: linear-gradient( to top ,#53aebc99 5% ,#f1f4f4f3);
+    
+}
+table{
+    font-size:28px; 
+    text-align: center; 
+    margin-left: 300px;
+    width: 75%;
+}
+td{
+    padding: 15px;
+}
+th{
+    background: linear-gradient(to bottom right, #33ccff62 30%, #ba91e4a3 100%); 
+}
+.input{
+    
+    width:98%;
+    font-size: 25px;
+    border: none;
+    border-bottom: 0px solid rgb(20, 20, 20);
+    background-color: transparent;
+    height: 35px;
+    padding: 5px;
+}
+.btn{
+    background-color: #208e9e;
+    transition-duration: 0.4s;
+    font-size: 25px;
+    border-radius: 10px;
+    height: 55px;
+    padding: 10px;
+    position: absolute;
+    bottom: 80px;
+    right: 85px;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn:hover {
+  background-color: #1bc8db;
+  color:#fff;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.result{
+    margin-top: 300px;
+    margin-bottom: 10px;
+    display: none;
+}
+/*#upbutton{
+    font-size: 45px;
+    width: 90px;
+    padding: 10px;
+    border-radius: 100px;
+    position: fixed;
+    right:6px;
+    bottom: 6px;
+    background: linear-gradient(to bottom right, #33ccff62 30%, #ba91e4a3 100%); 
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.5); 
+}*/
+</style>
+</head>
+<body>
+    <header > 
+        <image src="download.png" height="150" width="153" class="img"> </image>
+        <h1>Shri Dharmasthala Manjunatheshwara College of Engineering and Technology Dharwad</h1>
+        <p>Department of Mechanical Engineering 
+        </p>
+        <br> 
+    </header>
+    <div class="head" id="head1">
+        <p class="h3"><strong>Experiment 1 : Name Of Experiment</strong></p> 
+     </div>
+     <div class="description">
+        <p style="font-size: 25px;padding: 15px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its numberThis space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its numberThis space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+     </div>
+     <table border="1" >
+        <tr>
+            <th>
+                SI.NO
+            </th>
+                
+            <th colspan="">
+                name
+            </th>
+            <th style="width: 100px;">
+                input
+            </th>
+        </tr>
+        <tr>
+            <td>
+                1.
+            </td>
+            <td colspan="">
+                Enter Your Frist Number 
+            </td>
+            <td style="width: 100px;">
+                <input type="number" class="input" id="frist">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2.
+            </td>
+            <td colspan="">
+                Enter Your 2nd Number 
+            </td>
+            <td style="width: 100px;">
+                <input type="number" class="input" id="sec">
+            </td>
+        </tr>
+     </table>
+    <button class="btn"  onclick="computeAndScroll()">Compute and show Result table</button>
+    
+     <div class="result" id="resultid">
+        <table border="1">
+            <tr>
+                <th>
+                 SI.NO
+                </th>
+                <th>
+                    items   
+                </th>
+                <th style="width: 100px;" >
+                   Result
+                </th>
+            </tr>
+            <tr>
+                <td>
+                 1
+                </td>
+                <td>
+                    The capacity will be   
+                </td>
+                <td style="width: 100px;" >
+                   <div id="display" ></div>
+                </td>
+            </tr>
+
+         </table>
+         <br>
+         <br>
+         <p></p>
+     </div>
+  <!-- <button type="button" id="upbutton"> &#10169;</button>-->
+</body>
+<script>
+    function scrollToResult() {
+        resultid.style.display="block";
+    const resultDiv = document.getElementById('resultid');
+    if (resultDiv) {
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+
+    function compute(){
+        
+     var value1 = document.getElementById("frist").value;
+     var value2 = document.getElementById("sec").value;
+
+     value1 = parseFloat(value1);
+     value2 = parseFloat(value2);
+
+     // Use the values in your JavaScript logic
+     var result = value1 + value2;
+     var resultElement = document.getElementById("display");
+     // Display or use the result as needed
+     resultElement.innerHTML = "Result: " + result;
+
+    }
+
+
+    function computeAndScroll() {
+            scrollToResult();
+            compute();
+        }
+
+   /* function up(){
+        const resultDiv = document.getElementById('head1');
+    if (resultDiv) {
+        resultDiv.scrollIntoView({
+            behavior: "smooth", // You can use "auto" for instant scrolling
+            block: "start", // This will align the top of the element with the top of the viewport
+        });
+
+    }
+}*/
+
+</script>
+</html> 

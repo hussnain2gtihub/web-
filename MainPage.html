@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHACINAL LAB CALCULATOR</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin:0 ;
+    padding: 0;
+    background-color: rgba(0, 255, 255, 0.16);
+  
+}
+
+        header {
+    
+    background: #208e9e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    height: 150px;
+}
+.img{
+    top:20px;
+    position: absolute;
+    left:85px;  
+    border-radius:10%;  
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+p{
+    font-size: 30px;
+}
+
+.head{
+    
+    
+    margin-top:70px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width:900px;
+    height: 70px;
+    position: absolute;
+    left: 550px;
+    background: linear-gradient( to top ,#53aebc99 5% ,#f1f4f4f3);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    
+}
+.h3{
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  left:209px;
+  font-size:30px ;
+    
+}
+.div_contaniers{
+    width:600px;
+    height: 200px;
+    padding: 10px ;
+    position:relative;
+    top: 222px;
+    left: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 55px;
+    background: linear-gradient(to bottom right, #33ccff62 0%, #ba91e449 100%);
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.div_contaniers:hover {
+    background: linear-gradient(to bottom right, #33ccff 0%, #ba91e4 100%); 
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
+}
+.models{
+    height: 1000px;
+    background:linear-gradient( 45deg,#208d9e53 ,#f0f1f100);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <image src="download.png" height="150" width="153" class="img"> </image>
+        <h1>Shri Dharmasthala Manjunatheshwara College of Engineering and Technology Dharwad</h1>
+        <p>Department of Mechanical Engineering 
+        </p>
+        <br> 
+    </header>
+
+    <div class="head">
+       <p class="h3"><strong> Select Your Laboratory Experiment</strong></p> 
+    </div>
+    <div class="models">
+        <div class="div_contaniers" id="con1" data-target="idend" >
+            <h style="font-size: 25px;"><b>Experiment 1</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con2" data-target="idend">
+            <h style="font-size: 25px;"><b>Experiment 2</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con3" data-target="idend">
+            <h style="font-size: 25px;"><b>Experiment 3</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+
+
+
+        <div class="div_contaniers" id="con4">
+            <h style="font-size: 25px;"><b>Experiment 4</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con5">
+            <h style="font-size: 25px;"><b>Experiment 5</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con6">
+            <h style="font-size: 25px;"><b>Experiment 6</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+
+
+        <div class="div_contaniers" id="con7">
+            <h style="font-size: 25px;"><b>Experiment 7</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con8">
+            <h style="font-size: 25px;"><b>Experiment 8</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        <div class="div_contaniers" id="con9">
+            <h style="font-size: 25px;"><b>Experiment 9</b></h>
+            <p style="font-size: 20px;">This space will be utilized to rigth something about the experiment ,ie with regraudes to the experiment mentioned above with its number</p>
+        </div>
+        
+    </div>
+
+    <div class="end" id="idend">
+        <p style="font-size: 20px; text-align: center;margin-top: 50px;">&#9400; All Rights Reserverd</p>
+    </div>
+    
+</body>
+<script>
+ /*   // Get all elements with class "scroll-trigger"
+const scrollTriggers = document.querySelectorAll('.div_contaniers');
+
+// Add click event listener to each scroll trigger
+scrollTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function() {
+        // Get the target ID from the data-target attribute
+        const targetId = this.getAttribute('data-target');
+
+        // Get the target element using the target ID
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll to the top of the target element
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+*/
+
+//way two to display the calculation part 
+       const divElement = document.getElementById('con1'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement.addEventListener('click', function() {
+         window.location.href = "ex1.html"; 
+         });
+
+         const divElement2 = document.getElementById('con2'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement2.addEventListener('click', function() {
+         window.location.href = "ex2.html"; 
+         });
+        
+        const divElement3 = document.getElementById('con3'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement3.addEventListener('click', function() {
+         window.location.href = "ex3.html"; 
+         });
+
+         const divElement4 = document.getElementById('con4'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement4.addEventListener('click', function() {
+         window.location.href = "ex4.html"; 
+         });
+
+
+         const divElement5= document.getElementById('con5'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement5.addEventListener('click', function() {
+         window.location.href = "ex5.html"; 
+         });
+
+
+         const divElement6 = document.getElementById('con6'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement6.addEventListener('click', function() {
+         window.location.href = "ex6.html"; 
+         });
+
+
+         const divElement7 = document.getElementById('con7'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement7.addEventListener('click', function() {
+         window.location.href = "ex7.html"; 
+         });
+
+
+         const divElement8 = document.getElementById('con8'); // Replace 'div' with the ID or class of your actual div element
+
+        divElement8.addEventListener('click', function() {
+         window.location.href = "ex8.html"; 
+         });
+</script>
+</html>
